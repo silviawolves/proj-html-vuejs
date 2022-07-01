@@ -74,9 +74,9 @@ footer {
         border: none;
         background-color: $quaternary;
         border-radius: 15%;
-        width: 30px;
-        height: 30px;
-        margin: .2rem;
+        width: 25px;
+        height: 25px;
+        margin: .1rem;
         border: 1px solid $font-lightgray;
 
         &:hover {
