@@ -51,7 +51,7 @@ export default {
 @import "../assets/scss/button.scss";
 
 .jumbotron {
-    padding-top: 7rem;
+    padding-top: 8rem;
     padding-bottom: 4rem;
 
     .tag {
