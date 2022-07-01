@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <div class="d-flex justify-content-between">
+        <div class="d-flex justify-content-between align-items-center">
 
             <!--LOGO PAGINA-->
             <div class="page-logo">
@@ -9,15 +9,17 @@
 
             <!--LINK DI NAVIGAZIONE-->
             <div class="page-navlink">
-                <ul class="list-unstyled d-flex">
-                    <li v-for="(link, i) in navLinks" :key="i"><a href="javascript:void(0)">{{ link }}</a></li>
+                <ul class="list-unstyled m-0 d-flex">
+                    <li v-for="(link, i) in navLinks" :key="i">
+                        <a href="javascript:void(0)">{{ link.name }} <i :class="link.icon" class="ms-1"></i></a>
+                    </li>
                 </ul>
             </div>
 
             <!--FEATURES-->
             <div class="page-features">
                 <i class="fa-solid fa-magnifying-glass"></i>
-                <button v-for="btn in features" :key="btn.name" class="btn btn-primary">
+                <button v-for="btn in features" :key="btn.name" class="my-btn">
                     <i :class="btn.icon"></i>
                 </button>
             </div>
@@ -30,7 +32,24 @@ export default {
     name: 'TheHeader',
     data() {
         return {
-            navLinks: ['Home', 'Landing', 'Pages', 'Docs'],
+            navLinks: [
+                {
+                    name: 'Home',
+                    icon: null,
+                },
+                {
+                    name: 'Landing',
+                    icon: 'fa-solid fa-angle-down'
+                },
+                {
+                    name: 'Pages',
+                    icon: 'fa-solid fa-angle-down',
+                },
+                {
+                    name: 'Docs',
+                    icon: 'fa-solid fa-angle-down',
+                },
+            ],
             features: [
                 {
                     name: 'GitHub',
@@ -56,6 +75,57 @@ export default {
 
 .page-logo img {
     height: 20px;
+}
+
+.page-navlink {
+    text-transform: uppercase;
+    font-size: .7rem;
+
+    a {
+        font-weight: bold;
+        color: $font-darkgray;
+        text-decoration: none;
+        padding: 1.5rem;
+
+        &:focus {
+            color: $secondary;
+    }
+    }
+}
+
+.page-features {
+    .fa-magnifying-glass {
+        color: $font-gray;
+        font-size: .9rem;
+        margin-right: .5rem;
+    }
+
+    button {
+        border: none;
+        border-radius: 15%;
+        background-color: $btn-grey;
+        width: 30px;
+        margin: .2rem;
+        border: 1px solid $btn-grey;
+        box-shadow: 0px 2px 5px #c5d0f2;
+
+        i {
+            display: block;
+            color: $secondary;
+            font-size: .8rem;
+            padding: .4rem .1rem;
+        }
+
+        &:hover {
+            background-color: $secondary;
+
+            i {
+                color: white;
+            }
+        }
+
+
+    }
 }
 
 </style>
