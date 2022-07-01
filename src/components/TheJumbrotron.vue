@@ -1,43 +1,48 @@
 <template>
-    <div class="jumbotron">
-        <div class="row align-items-center justify-content-center">
+    <div class="jumbotron border-bottom">
 
-            <!--CONTENUTO TESTUALE-->
-            <div class="col" v-for="(content, i) in textContainer" :key="i">
-                <span class="tag">{{ content.tag }}</span>
+        <div class="container">
+            <div class="row align-items-center justify-content-center">
 
-                <h1>{{ content.title }}</h1>
-                <p class="pb-2">{{ content.paragraph }}</p>
+                <!--CONTENUTO TESTUALE-->
+                <div class="col" v-for="(content, i) in textContainer" :key="i">
+                    <span class="tag">{{ content.tag }}</span>
 
-                <button class="my-btn blue-button">Get Started</button>
-                <button class="my-btn outline-btn">Documentation</button>
+                    <h1>{{ content.title }}</h1>
+                    <p class="pb-2">{{ content.paragraph }}</p>
 
-                <p class="mt-2"><small>{{ content.version }}</small></p>
-            </div>
+                    <button class="my-btn blue-button">Get Started</button>
+                    <button class="my-btn outline-btn">Documentation</button>
 
-            <!--IMMAGINE JUMBO-->
-            <div class="col">
-                <img src="img/about.png" alt="jumbotron image">
+                    <p class="mt-2"><small>{{ content.version }}</small></p>
+                </div>
+
+                <!--IMMAGINE JUMBO-->
+                <div class="col">
+                    <img src="img/about.png" alt="jumbotron image">
+                </div>
+
             </div>
         </div>
     </div>
 </template>
 
 <script>
+
 export default {
-    name: 'TheJumbrotron',
+    name: "TheJumbrotron",
     data() {
         return {
             textContainer: [
                 {
-                    tag: 'Development',
-                    title: 'A Complete Developer Toolset',
-                    paragraph: 'Launch your campaign and benefit from our expertise on designing and managing conversion centered bootstrap4 html page.',
-                    version: 'Current Version: v2.6.0',
+                    tag: "Development",
+                    title: "A Complete Developer Toolset",
+                    paragraph: "Launch your campaign and benefit from our expertise on designing and managing conversion centered bootstrap4 html page.",
+                    version: "Current Version: v2.6.0",
                 }
             ]
-        }
-    }
+        };
+    },
 }
 </script>
 

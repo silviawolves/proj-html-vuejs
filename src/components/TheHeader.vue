@@ -1,42 +1,49 @@
 <template>
 
     <div class="header">
-        <div class="container">
-            <div class="d-flex justify-content-between align-items-center">
 
-                <!--LOGO PAGINA-->
-                <div class="page-logo">
-                    <img src="/img/logo-dark.png" alt="logo landrick">
-                </div>
+        <div class="navigation-bar">
+            <div class="container">
+                <div class="d-flex justify-content-between align-items-center">
 
-                <!--LINK DI NAVIGAZIONE-->
-                <div class="page-navlink">
-                    <ul class="list-unstyled m-0 d-flex">
-                        <li v-for="(link, i) in navLinks" :key="i">
-                            <a href="javascript:void(0)">{{ link.name }} <i :class="link.icon" class="ms-1"></i></a>
-                        </li>
-                    </ul>
-                </div>
+                    <!--LOGO PAGINA-->
+                    <div class="page-logo">
+                        <img src="/img/logo-dark.png" alt="logo landrick">
+                    </div>
 
-                <!--FEATURES-->
-                <div class="page-features">
-                    <a href="javascript:void(0)"><i class="fa-solid fa-magnifying-glass"></i></a>
-                    <button v-for="btn in features" :key="btn.name" class="my-btn">
-                        <i :class="btn.icon"></i>
-                    </button>
+                    <!--LINK DI NAVIGAZIONE-->
+                    <div class="page-navlink">
+                        <ul class="list-unstyled m-0 d-flex">
+                            <li v-for="(link, i) in navLinks" :key="i">
+                                <a href="javascript:void(0)">{{ link.name }} <i :class="link.icon" class="ms-1"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!--FEATURES-->
+                    <div class="page-features">
+                        <a href="javascript:void(0)"><i class="fa-solid fa-magnifying-glass"></i></a>
+                        <button v-for="btn in features" :key="btn.name" class="my-btn">
+                            <i :class="btn.icon"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
-
-            <!--JUMBOTRON PRESENTAZIONE PAGINA-->
-            <TheJumbrotron></TheJumbrotron>
-
         </div>
+
+        <!--JUMBOTRON PRESENTAZIONE PAGINA-->
+        <TheJumbrotron></TheJumbrotron>
+        <!--COLLEGAMENTI ESTERNI-->
+        <ExternalLinks></ExternalLinks>
+
     </div>
     
 </template>
 
 <script>
 import TheJumbrotron from "./TheJumbrotron.vue";
+import ExternalLinks from "./ExternalLinks.vue";
+
 export default {
     name: "TheHeader",
     data() {
@@ -75,7 +82,7 @@ export default {
             ],
         };
     },
-    components: { TheJumbrotron }
+    components: { TheJumbrotron, ExternalLinks }
 }
 </script>
 
@@ -85,7 +92,13 @@ export default {
 
 .header {
     background-color: $primary;
-    padding: .5rem 0;
+
+    .navigation-bar {
+        background-color: $primary;
+        position: fixed;
+        padding: .5rem 0;
+        width: 100%;
+    }
 
     .page-logo img {
         height: 20px;
