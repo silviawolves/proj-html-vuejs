@@ -3,16 +3,16 @@
         <div class="row align-items-center justify-content-center">
 
             <!--CONTENUTO TESTUALE-->
-            <div class="col">
-                <span class="tag">Development</span>
+            <div class="col" v-for="(content, i) in textContainer" :key="i">
+                <span class="tag">{{ content.tag }}</span>
 
-                <h1>A Complete Developer Toolset</h1>
-                <p class="pb-2">Launch your campaign and benefit from our expertise on designing and managing conversion centered bootstrap4 html page.</p>
+                <h1>{{ content.title }}</h1>
+                <p class="pb-2">{{ content.paragraph }}</p>
 
                 <button class="my-btn blue-button">Get Started</button>
                 <button class="my-btn outline-btn">Documentation</button>
 
-                <p class="mt-2"><small>Current Version: v2.6.0</small></p>
+                <p class="mt-2"><small>{{ content.version }}</small></p>
             </div>
 
             <!--IMMAGINE JUMBO-->
@@ -25,7 +25,19 @@
 
 <script>
 export default {
-
+    name: 'TheJumbrotron',
+    data() {
+        return {
+            textContainer: [
+                {
+                    tag: 'Development',
+                    title: 'A Complete Developer Toolset',
+                    paragraph: 'Launch your campaign and benefit from our expertise on designing and managing conversion centered bootstrap4 html page.',
+                    version: 'Current Version: v2.6.0',
+                }
+            ]
+        }
+    }
 }
 </script>
 
