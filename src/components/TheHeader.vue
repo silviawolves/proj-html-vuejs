@@ -1,38 +1,40 @@
 <template>
+    <div>
+        <header>
 
-    <div class="header">
+            <div class="navigation-bar">
+                <div class="container">
+                    <div class="d-flex justify-content-between align-items-center">
 
-        <div class="navigation-bar">
-            <div class="container">
-                <div class="d-flex justify-content-between align-items-center">
+                        <!--LOGO PAGINA-->
+                        <div class="page-logo">
+                            <img src="/img/logo-dark.png" alt="logo landrick">
+                        </div>
 
-                    <!--LOGO PAGINA-->
-                    <div class="page-logo">
-                        <img src="/img/logo-dark.png" alt="logo landrick">
-                    </div>
+                        <!--LINK DI NAVIGAZIONE-->
+                        <div class="page-navlink">
+                            <ul class="list-unstyled m-0 d-flex">
+                                <li v-for="(link, i) in navLinks" :key="i">
+                                    <a href="javascript:void(0)">{{ link.name }} <i :class="link.icon" class="ms-1"></i></a>
+                                </li>
+                            </ul>
+                        </div>
 
-                    <!--LINK DI NAVIGAZIONE-->
-                    <div class="page-navlink">
-                        <ul class="list-unstyled m-0 d-flex">
-                            <li v-for="(link, i) in navLinks" :key="i">
-                                <a href="javascript:void(0)">{{ link.name }} <i :class="link.icon" class="ms-1"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <!--FEATURES-->
-                    <div class="page-features">
-                        <a href="javascript:void(0)"><i class="fa-solid fa-magnifying-glass"></i></a>
-                        <button v-for="btn in features" :key="btn.name" class="my-btn">
-                            <i :class="btn.icon"></i>
-                        </button>
+                        <!--FEATURES-->
+                        <div class="page-features">
+                            <a href="javascript:void(0)"><i class="fa-solid fa-magnifying-glass"></i></a>
+                            <button v-for="btn in features" :key="btn.name" class="my-btn">
+                                <i :class="btn.icon"></i>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <!--JUMBOTRON PRESENTAZIONE PAGINA-->
-        <TheJumbrotron></TheJumbrotron>
+            <!--JUMBOTRON PRESENTAZIONE PAGINA-->
+            <TheJumbrotron></TheJumbrotron>
+
+        </header>
     </div>
     
 </template>
@@ -86,7 +88,7 @@ export default {
 @import "../assets/scss/main.scss";
 @import "../assets/scss/_variables.scss";
 
-.header {
+header {
     background-color: $primary;
 
     .navigation-bar {
@@ -149,5 +151,4 @@ export default {
         }
     }
 }
-
 </style>
