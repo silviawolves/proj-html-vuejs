@@ -23,7 +23,7 @@ export default {
 @import "./assets/scss/_variables.scss";
 
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Nunito', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: $primary;
