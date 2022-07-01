@@ -4,9 +4,15 @@
 
             <!--CONTENUTO TESTUALE-->
             <div class="col">
-                <button>Development</button>
+                <span class="tag">Development</span>
+
                 <h1>A Complete Developer Toolset</h1>
-                <p>Launch your campaign and benefit from our expertise on designing and managing conversion centered bootstrap4 html page.</p>
+                <p class="pb-2">Launch your campaign and benefit from our expertise on designing and managing conversion centered bootstrap4 html page.</p>
+
+                <button class="my-btn blue-button">Get Started</button>
+                <button class="my-btn outline-btn">Documentation</button>
+
+                <p class="mt-2"><small>Current Version: v2.6.0</small></p>
             </div>
 
             <!--IMMAGINE JUMBO-->
@@ -25,11 +31,12 @@ export default {
 
 <style lang="scss" scoped>
 @import "../assets/scss/_variables.scss";
+@import "../assets/scss/button.scss";
 
 .jumbotron {
     padding: 4rem 0;
 
-    button {
+    .tag {
         border: none;
         border-radius: 50px;
         background-color: $btn-grey;
@@ -38,6 +45,7 @@ export default {
         font-size: .6rem;
         font-weight: bold;
         margin-bottom: 1rem;
+        padding: .1rem .2rem;
     }
 
     h1 {
@@ -50,5 +58,4 @@ export default {
         font-size: .9rem;
     }
 }
-
 </style>
