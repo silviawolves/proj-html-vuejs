@@ -2,6 +2,7 @@
   <div id="app">
     
     <TheHeader></TheHeader>
+    <ExternalLinks></ExternalLinks>
     <TheMain></TheMain>
     <TheFooter></TheFooter>
 
@@ -10,12 +11,13 @@
 
 <script>
 import TheHeader from './components/TheHeader.vue';
+import ExternalLinks from './components/ExternalLinks.vue';
 import TheMain from './components/TheMain.vue';
 import TheFooter from './components/TheFooter.vue';
 
 export default {
     name: "App",
-    components: { TheHeader, TheMain, TheFooter }
+    components: { TheHeader, ExternalLinks, TheMain, TheFooter }
 }
 </script>
 

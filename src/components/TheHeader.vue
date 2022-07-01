@@ -33,16 +33,12 @@
 
         <!--JUMBOTRON PRESENTAZIONE PAGINA-->
         <TheJumbrotron></TheJumbrotron>
-        <!--COLLEGAMENTI ESTERNI-->
-        <ExternalLinks></ExternalLinks>
-
     </div>
     
 </template>
 
 <script>
 import TheJumbrotron from "./TheJumbrotron.vue";
-import ExternalLinks from "./ExternalLinks.vue";
 
 export default {
     name: "TheHeader",
@@ -82,7 +78,7 @@ export default {
             ],
         };
     },
-    components: { TheJumbrotron, ExternalLinks }
+    components: { TheJumbrotron }
 }
 </script>
 
