@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="wrapper">
         <footer>
             <div class="container">
 
@@ -54,6 +54,8 @@
 
         <LowerFooter></LowerFooter>
         
+        <!--BOTTONE CHE SCROLLA IN CIMA ALLA PAGINA-->
+        <button class="scroll-btn square-btn" @click="toTheTop()"><i class="fa-solid fa-arrow-up"></i></button>
     </div>
 </template>
 
@@ -87,6 +89,11 @@ export default {
             usefulLinks: ["Terms of Services", "Privacy Policy", "Documentation", "Changelog", "Components"],
         };
     },
+    methods: {
+        toTheTop() {
+            window.scrollTo(0, 0);
+        }
+    },
 }
 </script>
 
@@ -95,85 +102,112 @@ export default {
 @import "../assets/scss/_variables.scss";
 @import "../assets/scss/button.scss";
 
-footer {
-    background-color: $quaternary;
-    padding: 2.5rem 0;
-    color: $font-lightgray;
-    font-size: .8rem;
-    border-bottom: 1px solid #27314f;
+.wrapper {
+    position: relative;
 
-    img {
-        height: 20px;
-        margin-bottom: 1.5rem;
-    }
-
-    .square-btn {
+    footer {
         background-color: $quaternary;
-        width: 25px;
-        height: 25px;
-        margin: .1rem;
-        border: 1px solid $font-lightgray;
-
-        &:hover {
-            background-color: lighten($color: $quaternary, $amount: 20);
-        }
-
-        i {
-            color: $font-lightgray;
-            font-size: .7rem;
-        }
-    }
-
-    //LINKS SECTION - II, III COL
-    li {
-        padding-top: .5rem;
-
-        i {
-            font-size: .4rem;
-            margin-right: .5rem;
-            vertical-align: middle;
-        }
-
-        a {
-            text-decoration: none;
-            color: $font-lightgray;
-        }
-    }
-    
-    //NEWSLETTER SECTION - IV COL
-    .asterisk-sign {
-        color: $reddish;
-    }
-
-    .form-floating > .form-control {
-        height: 20px;
-    }
-    .form-control {
-        background-color: #27314f;
-        border: none;
-    }
-
-    .form-floating > label {
-        padding: .5rem 1rem;
-        height: auto;
-    }
-
-    .sub-btn {
-        width: 100%;
-        background-color: #27314f;
-        color: $secondary;
+        padding: 2.5rem 0;
+        color: $font-lightgray;
         font-size: .8rem;
-        font-weight: bold;
-        border: none;
-        border-radius: 5px;
-        padding: .5rem;
-        margin-top: 1rem;
-        box-shadow: 0px 2px 5px $tertiary;
+        border-bottom: 1px solid #27314f;
 
-        &:hover {
-            background-color: lighten($color: #27314f, $amount: 5);
-            color: $font-lightgray;
+        img {
+            height: 20px;
+            margin-bottom: 1.5rem;
         }
+
+        .square-btn {
+            background-color: $quaternary;
+            width: 25px;
+            height: 25px;
+            margin: .1rem;
+            border: 1px solid $font-lightgray;
+
+            &:hover {
+                background-color: lighten($color: $quaternary, $amount: 20);
+            }
+
+            i {
+                color: $font-lightgray;
+                font-size: .7rem;
+            }
+        }
+
+        //LINKS SECTION - II, III COL
+        li {
+            padding-top: .5rem;
+
+            i {
+                font-size: .4rem;
+                margin-right: .5rem;
+                vertical-align: middle;
+            }
+
+            a {
+                text-decoration: none;
+                color: $font-lightgray;
+            }
+        }
+        
+        //NEWSLETTER SECTION - IV COL
+        .asterisk-sign {
+            color: $reddish;
+        }
+
+        .form-floating > .form-control {
+            height: 20px;
+        }
+        .form-control {
+            background-color: #27314f;
+            border: none;
+        }
+
+        .form-floating > label {
+            padding: .5rem 1rem;
+            height: auto;
+        }
+
+        .sub-btn {
+            width: 100%;
+            background-color: #27314f;
+            color: $secondary;
+            font-size: .8rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            padding: .5rem;
+            margin-top: 1rem;
+            box-shadow: 0px 2px 5px $tertiary;
+
+            &:hover {
+                background-color: lighten($color: #27314f, $amount: 5);
+                color: $font-lightgray;
+            }
+        }
+    }
+    .scroll-btn {
+        background-color: transparent;
+        width: 30px;
+        height: 30px;
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        line-height: 35%;
+        box-shadow: 0px 2px 3px $tertiary;
+
+            i {
+                color: $font-lightgray;
+                font-size: .7rem;
+            }
+
+            &:hover {
+                background-color: $tertiary;
+                    
+                i {
+                    color: white;
+                }
+            }
     }
 }
 </style>

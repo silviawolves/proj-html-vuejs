@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     
-    <button><i class="fa-solid fa-gear"></i></button>
+    <button class="settings-btn"><i class="fa-solid fa-gear"></i></button>
 
     <TheHeader></TheHeader>
     <ExternalLinks></ExternalLinks>
@@ -19,7 +19,7 @@ import TheFooter from './components/TheFooter.vue';
 
 export default {
     name: "App",
-    components: { TheHeader, ExternalLinks, TheMain, TheFooter }
+    components: { TheHeader, ExternalLinks, TheMain, TheFooter },
 }
 </script>
 
@@ -32,7 +32,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   position: relative;
 
-  button {
+  .settings-btn {
     margin: 0;
     padding: 0;
     border: none;

@@ -12,9 +12,6 @@
             </div>
 
         </div>
-
-        <!--BOTTONE CHE SCROLLA IN CIMA ALLA PAGINA-->
-        <button @click="toTheTop()"><i class="fa-solid fa-arrow-up"></i></button>
     </div>
 </template>
 
@@ -47,11 +44,6 @@ export default {
             ]
         }
     },
-    methods: {
-        toTheTop() {
-            window.scrollTo(0, 0);
-        }
-    },
 }
 </script>
 
@@ -74,32 +66,6 @@ export default {
     .payments > img {
         height: 20px;
         margin-left: .2rem;
-    }
-
-    button {
-        border: none;
-        border-radius: 5px;
-        background-color: $tertiary;
-        width: 30px;
-        height: 30px;
-        position: absolute;
-        right: 20px;
-        bottom: 20px;
-        line-height: 35%;
-        box-shadow: 0px 2px 3px $tertiary;
-
-        i {
-            color: $font-lightgray;
-            font-size: .7rem;
-        }
-
-        &:hover {
-            background-color: lighten($color: $tertiary, $amount: 10);
-            
-            i {
-                color: white;
-            }
-        }
     }
 }
 </style>
