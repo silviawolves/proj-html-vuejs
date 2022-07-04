@@ -1,6 +1,6 @@
 <template>
     <div>
-        <footer>
+        <footer class="border-bottom">
             <div class="container">
 
                 <!--SOMMARIO LANDRICK + SOCIAL-->
@@ -18,7 +18,7 @@
                         <div class="row">
                             <div class="col">
                                 <h6 class="fw-bold text-white pb-2">Company</h6>
-                                <ul class="list-unstyled">
+                                <ul class="list-unstyled m-0">
                                     <li v-for="(link, i) in companyLinks" :key="i">
                                     <i class="fa-solid fa-chevron-right"></i><a href="javascript:void(0)"> {{ link }}</a></li>
                                 </ul>
@@ -26,7 +26,7 @@
 
                             <div class="col">
                                 <h6 class="fw-bold text-white pb-2">Useful Links</h6>
-                                <ul class="list-unstyled">
+                                <ul class="list-unstyled m-0">
                                     <li v-for="(link, i) in usefulLinks" :key="i">
                                     <i class="fa-solid fa-chevron-right"></i><a href="javascript:void(0)"> {{ link }}</a></li>
                                 </ul>
@@ -36,7 +36,7 @@
 
                     <!--ISCRIZIONE NEWSLETTER-->
                     <div class="col">
-                        <h6 class="fw-bold text-white pb-2">Newsletter</h6>
+                        <h6 class="fw-bold text-white pb-3">Newsletter</h6>
                         <p>Subscribe and receive the latest tips via email.</p>
                         <div class="fw-bold pb-1">Write your email <span class="asterisk-sign">*</span></div>
 
@@ -90,13 +90,13 @@ export default {
 
 footer {
     background-color: $quaternary;
-    padding: 2.5rem;
+    padding: 2.5rem 0;
     color: $font-lightgray;
     font-size: .7rem;
 
     img {
         height: 20px;
-        margin-bottom: 1rem;
+        margin-bottom: 1.5rem;
     }
 
     .social-btn {
@@ -120,7 +120,7 @@ footer {
 
     //LINKS SECTION - II, III COL
     li {
-        padding-bottom: .5rem;
+        padding-top: .5rem;
 
         i {
             font-size: .4rem;
@@ -169,6 +169,5 @@ footer {
             color: $font-lightgray;
         }
     }
-
 }
 </style>
