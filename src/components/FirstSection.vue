@@ -111,23 +111,25 @@ export default {
             }
         }
 
+        //ICONA GRANDE ALL'HOVER
         .bg-icon {
             font-size: 150px;
-            color: $primary;
+            color: $btn-grey;
             position: absolute;
-            left: 40px;
+            left: 60px;
             top: 30px;
             z-index: -1;
             opacity: 0;
             transition: opacity .3s linear;
         }
 
+        //ENTRAMBI GLI HOVER DELLA CARD
         &:hover {
             transform: translate(0px, -15px);
         }
 
         &:hover .bg-icon {
-            opacity: 1;
+            opacity: .5;
         }
     }
 }
