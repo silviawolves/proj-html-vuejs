@@ -17,7 +17,7 @@
                     
                     <div class="code-navbar">
                         <div class="code-btn" v-for="(command, i) in codeSection" :key="i">
-                            <a @click="changePage(i)" :href="'#page-' + i">{{ command }}</a>
+                            <a @click="changePage(i)" :href="'#page-' + (i + 1)" :class="{'active' : selected === i}">{{ command }}</a>
                         </div>
                     </div>
 
@@ -51,18 +51,19 @@
 </template>
 
 <script>
-
 export default {
     name: 'SecondSection',
     data() {
         return {
             codeSection: ['npm', 'nuget', 'spm', 'github'],
             currentPage: 0,
+            selected: 0,
         }
     },
     methods: {
         changePage(indice) {
             this.currentPage = indice
+            this.selected = indice
         },
     }
 }
@@ -109,13 +110,13 @@ p {
                 display: block;
                 border-radius: 5px;
                 border: .5px solid #4f5a69;
-
-                &:focus {
-                    background-color: $slate-gray;
-                    border: .5px solid #576272;
-                }
             }
         }
+    }
+
+    .active {
+        background-color: $slate-gray;
+        border: .5px solid #576272;
     }
 
     .code-content {

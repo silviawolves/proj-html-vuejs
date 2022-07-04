@@ -19,7 +19,7 @@
 
                 <!--IMMAGINE JUMBO-->
                 <div class="col">
-                    <img src="img/about.png" alt="jumbotron image">
+                    <img src="img/about.png" alt="jumbotron image" class="float-end">
                 </div>
 
             </div>
