@@ -3,6 +3,7 @@
         <footer>
             <div class="container">
 
+                <!--SOMMARIO LANDRICK + SOCIAL-->
                 <div class="row">
                     <div class="col">
                         <img src="img/logo-light.png" alt="logo landrick">
@@ -12,11 +13,28 @@
                         </div>
                     </div>
 
+                    <!--COLONNE CON LINK INTERNI AL SITO-->
                     <div class="col">
-                        <div class="col"></div>
-                        <div class="col"></div>
+                        <div class="row">
+                            <div class="col">
+                                <h6 class="fw-bold text-white pb-2">Company</h6>
+                                <ul class="list-unstyled">
+                                    <li v-for="(link, i) in companyLinks" :key="i">
+                                    <i class="fa-solid fa-chevron-right"></i> {{ link }}</li>
+                                </ul>
+                            </div>
+
+                            <div class="col">
+                                <h6 class="fw-bold text-white pb-2">Useful Links</h6>
+                                <ul class="list-unstyled">
+                                    <li v-for="(link, i) in usefulLinks" :key="i">
+                                    <i class="fa-solid fa-chevron-right"></i> {{ link }}</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
 
+                    <!--ISCRIZIONE NEWSLETTER-->
                     <div class="col">
 
                     </div>
@@ -50,6 +68,8 @@ export default {
                     icon: 'fa-brands fa-linkedin-in',
                 },
             ],
+            companyLinks: [ 'About us', 'Services', 'Team', 'Pricing', 'Project', 'Careers', 'Blog', 'Login' ],
+            usefulLinks: [ 'Terms of Services', 'Privacy Policy', 'Documentation', 'Changelog', 'Components' ],
         }
     }
 }
@@ -89,6 +109,14 @@ footer {
         }
     }
 
-}
+    li {
+        padding-bottom: .5rem;
 
+        i {
+            font-size: .4rem;
+            margin-right: .5rem;
+            vertical-align: middle;
+        }
+    }
+}
 </style>
