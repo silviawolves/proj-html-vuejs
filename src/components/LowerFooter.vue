@@ -65,7 +65,7 @@ export default {
 
     .copyright {
         color: $font-lightgray;
-        font-size: .7rem;
+        font-size: .8rem;
 
         .fa-heart {
             color: $reddish;

@@ -1,12 +1,17 @@
 <template>
     <div class="container py-5">
+        
+        <FirstSection></FirstSection>
 
     </div>
 </template>
 
 <script>
+import FirstSection from './FirstSection.vue';
+
 export default {
-    name: 'TheMain',
+    name: "TheMain",
+    components: { FirstSection },
 }
 </script>
 

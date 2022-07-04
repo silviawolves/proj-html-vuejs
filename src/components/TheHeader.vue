@@ -23,7 +23,7 @@
                         <!--FEATURES-->
                         <div class="page-features">
                             <a href="javascript:void(0)"><i class="fa-solid fa-magnifying-glass"></i></a>
-                            <button v-for="btn in features" :key="btn.name" class="my-btn">
+                            <button v-for="btn in features" :key="btn.name" class="square-btn">
                                 <i :class="btn.icon"></i>
                             </button>
                         </div>
@@ -87,6 +87,7 @@ export default {
 <style lang="scss" scoped>
 @import "../assets/scss/main.scss";
 @import "../assets/scss/_variables.scss";
+@import "../assets/scss/button.scss";
 
 header {
     background-color: $primary;
@@ -126,12 +127,8 @@ header {
         }
 
         button {
-            border: none;
-            border-radius: 15%;
-            background-color: $btn-grey;
             width: 30px;
             margin: .2rem;
-            border: 1px solid $btn-grey;
             box-shadow: 0px 2px 5px #c5d0f2;
 
             i {

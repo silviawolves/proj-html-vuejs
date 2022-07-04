@@ -9,7 +9,7 @@
                         <img src="img/logo-light.png" alt="logo landrick">
                         <p class="pb-1">Start working with Landrick that can provide everything you need to generate awareness, drive traffic, connect.</p>
                         <div class="social-container">
-                            <button class="social-btn" v-for="(social, i) in social" :key="i"><i :class="social.icon"></i></button>
+                            <button class="square-btn" v-for="(social, i) in social" :key="i"><i :class="social.icon"></i></button>
                         </div>
                     </div>
 
@@ -93,12 +93,13 @@ export default {
 <style lang="scss" scoped>
 @import "../assets/scss/main.scss";
 @import "../assets/scss/_variables.scss";
+@import "../assets/scss/button.scss";
 
 footer {
     background-color: $quaternary;
     padding: 2.5rem 0;
     color: $font-lightgray;
-    font-size: .7rem;
+    font-size: .8rem;
     border-bottom: 1px solid #27314f;
 
     img {
@@ -106,10 +107,8 @@ footer {
         margin-bottom: 1.5rem;
     }
 
-    .social-btn {
-        border: none;
+    .square-btn {
         background-color: $quaternary;
-        border-radius: 15%;
         width: 25px;
         height: 25px;
         margin: .1rem;
