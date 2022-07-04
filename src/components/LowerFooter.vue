@@ -85,12 +85,20 @@ export default {
         position: absolute;
         right: 20px;
         bottom: 20px;
-        line-height: 20%;
+        line-height: 35%;
         box-shadow: 0px 2px 3px $tertiary;
 
         i {
             color: $font-lightgray;
-            font-size: .6rem;
+            font-size: .7rem;
+        }
+
+        &:hover {
+            background-color: lighten($color: $tertiary, $amount: 10);
+            
+            i {
+                color: white;
+            }
         }
     }
 }
