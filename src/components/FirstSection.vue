@@ -11,6 +11,8 @@
                     <h6 class="fw-bold text-black pt-3">{{ card.title }}</h6>
                     <p class="w-100">{{ card.content }}</p>
                     <a href="javascript:void(0)">Read More <i class="fa-solid fa-chevron-right"></i></a>
+
+                    <i class="fa-solid bg-icon" :class="card.icon"></i>
                 </div>
 
             </div>
@@ -54,6 +56,7 @@ export default {
 <style lang="scss" scoped>
 @import "../assets/scss/_variables.scss";
 @import "../assets/scss/button.scss";
+
 .container {
     font-size: .8rem;
     color: $font-gray;
@@ -68,10 +71,14 @@ export default {
             }
         }
 
+        //CARD INTERNA ALLE COL
         .my-card {
             border: 1px solid $light-border;
             border-radius: 5px;
             padding: 1rem;
+            transition: transform .3s linear;
+            position: relative;
+            overflow: hidden;
 
             .square-btn {
                 height: 50px;
@@ -86,7 +93,6 @@ export default {
                     text-align: center;
                 }
             }
-
 
             //READ MORE
             a {
@@ -103,7 +109,25 @@ export default {
                 color: $tertiary;
                 transition: color .3s linear;
             }
+        }
 
+        .bg-icon {
+            font-size: 150px;
+            color: $primary;
+            position: absolute;
+            left: 40px;
+            top: 30px;
+            z-index: -1;
+            opacity: 0;
+            transition: opacity .3s linear;
+        }
+
+        &:hover {
+            transform: translate(0px, -15px);
+        }
+
+        &:hover .bg-icon {
+            opacity: 1;
         }
     }
 }
