@@ -1,6 +1,6 @@
 <template>
     <div>
-        <footer class="border-bottom">
+        <footer>
             <div class="container">
 
                 <!--SOMMARIO LANDRICK + SOCIAL-->
@@ -35,7 +35,7 @@
                     </div>
 
                     <!--ISCRIZIONE NEWSLETTER-->
-                    <div class="col">
+                    <div class="col-3">
                         <h6 class="fw-bold text-white pb-3">Newsletter</h6>
                         <p>Subscribe and receive the latest tips via email.</p>
                         <div class="fw-bold pb-1">Write your email <span class="asterisk-sign">*</span></div>
@@ -51,36 +51,42 @@
 
             </div>
         </footer>
+
+        <LowerFooter></LowerFooter>
+        
     </div>
 </template>
 
 <script>
+import LowerFooter from './LowerFooter.vue'
+
 export default {
-    name: 'TheFooter',
+    name: "TheFooter",
+    components: { LowerFooter },
     data() {
         return {
             social: [
                 {
-                    name: 'Facebook',
-                    icon: 'fa-brands fa-facebook-f',
+                    name: "Facebook",
+                    icon: "fa-brands fa-facebook-f",
                 },
                 {
-                    name: 'Instagram',
-                    icon: 'fa-brands fa-instagram',
+                    name: "Instagram",
+                    icon: "fa-brands fa-instagram",
                 },
                 {
-                    name: 'Twitter',
-                    icon: 'fa-brands fa-twitter',
+                    name: "Twitter",
+                    icon: "fa-brands fa-twitter",
                 },
                 {
-                    name: 'Linkedin',
-                    icon: 'fa-brands fa-linkedin-in',
+                    name: "Linkedin",
+                    icon: "fa-brands fa-linkedin-in",
                 },
             ],
-            companyLinks: [ 'About us', 'Services', 'Team', 'Pricing', 'Project', 'Careers', 'Blog', 'Login' ],
-            usefulLinks: [ 'Terms of Services', 'Privacy Policy', 'Documentation', 'Changelog', 'Components' ],
-        }
-    }
+            companyLinks: ["About us", "Services", "Team", "Pricing", "Project", "Careers", "Blog", "Login"],
+            usefulLinks: ["Terms of Services", "Privacy Policy", "Documentation", "Changelog", "Components"],
+        };
+    },
 }
 </script>
 
@@ -93,6 +99,7 @@ footer {
     padding: 2.5rem 0;
     color: $font-lightgray;
     font-size: .7rem;
+    border-bottom: 1px solid #27314f;
 
     img {
         height: 20px;
@@ -136,7 +143,7 @@ footer {
     
     //NEWSLETTER SECTION - IV COL
     .asterisk-sign {
-        color: #E43F52;
+        color: $reddish;
     }
 
     .form-floating > .form-control {
