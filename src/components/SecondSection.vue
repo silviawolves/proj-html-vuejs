@@ -1,6 +1,7 @@
 <template>
     <div class="container py-4">
 
+        <!--INTESTAZIONE SESSION-->
         <div class="row justify-content-center text-center">
             <div class="col-6">
                 <div class="quickstart">Quickstart</div>
@@ -9,6 +10,7 @@
             </div>
         </div>
 
+        <!--MOCKUP CODICE E COMANDI-->
         <div class="row justify-content-center">
             <div class="col-8">
                 <div class="code-table">
@@ -61,7 +63,7 @@ export default {
     methods: {
         changePage(indice) {
             this.currentPage = indice
-        }
+        },
     }
 }
 </script>
@@ -128,5 +130,4 @@ p {
 .fa-circle-check {
     color: $acid-green;
 }
-
 </style>
