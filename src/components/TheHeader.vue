@@ -97,6 +97,7 @@ header {
         position: fixed;
         padding: .5rem 0;
         width: 100%;
+        z-index: 1;
     }
 
     .page-logo img {

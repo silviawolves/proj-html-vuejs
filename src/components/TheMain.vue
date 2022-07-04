@@ -1,17 +1,19 @@
 <template>
-    <div class="container py-5">
+    <div>
         
         <FirstSection></FirstSection>
+        <SecondSection></SecondSection>
 
     </div>
 </template>
 
 <script>
 import FirstSection from './FirstSection.vue';
+import SecondSection from './SecondSection.vue';
 
 export default {
     name: "TheMain",
-    components: { FirstSection },
+    components: { FirstSection, SecondSection },
 }
 </script>
 
