@@ -1,11 +1,11 @@
 <template>
     <div class="container py-4">
 
-        <!--INTESTAZIONE SESSION-->
+        <!--INTESTAZIONE SECTION-->
         <div class="row justify-content-center text-center">
             <div class="col-6">
                 <div class="quickstart">Quickstart</div>
-                <h4 class="fw-bold">Awesome isn't it? Let's dive in!</h4>
+                <h4 class="fw-bold pb-3">Awesome isn't it? Let's dive in!</h4>
                 <p>Start working with <span>Landrick</span> that can provide everything you need to generate awareness, drive traffic, connect.</p>
             </div>
         </div>
@@ -82,6 +82,7 @@ export default {
 
 p {
     color: $font-gray;
+    padding-bottom: 2rem;
 }
 
 .code-table {

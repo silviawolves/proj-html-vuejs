@@ -7,8 +7,8 @@
                     <h4 class="fw-bold pb-3">Build tools and extensive documentation</h4>
                     <p>You can combine all the Landrick templates into a single one, you can take a component from the Application theme and use it in the Website.</p>
                     <ul class="list-unstyled">
-                        <li v-for="(pro, i) in advantages" :key="i">
-                        <i class="fa-regular fa-circle-check"></i> {{ pro.text }}
+                        <li class="pb-1" v-for="(pro, i) in advantages" :key="i">
+                            <i class="fa-regular fa-circle-check"></i> {{ pro.text }}
                         </li>
                     </ul>
 

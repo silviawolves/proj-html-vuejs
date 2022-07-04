@@ -1,6 +1,6 @@
 <template>
     <div class="container py-5">
-        <h4 class="fw-bold pt-5 pb-2 text-black">Key Features</h4>
+        <h4 class="fw-bold pt-5 pb-3 text-black">Key Features</h4>
         <p>Start working with <span>Landrick</span> that can provide everything you need to generate awareness, drive traffic, connect.</p>
 
         <div class="row">

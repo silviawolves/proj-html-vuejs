@@ -2,7 +2,7 @@
     <div class="container py-5 text-center">
         <div class="row justify-content-center">
             <div class="col-6">
-                <h4 class="fw-bold">Want to be among the first to find out?</h4>
+                <h4 class="fw-bold pb-3">Want to be among the first to find out?</h4>
                 <p>Start working with <span>Landrick</span> that can provide everything you need to generate awareness, drive traffic, connect.</p>
 
                 <div class="my-input">
@@ -27,6 +27,7 @@ export default {
 p {
     color: $font-gray;
     font-size: .8rem;
+    padding-bottom: 1rem;
 
     span {
         color: $secondary;
