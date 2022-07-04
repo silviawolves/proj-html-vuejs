@@ -9,7 +9,7 @@
                         <img src="img/logo-light.png" alt="logo landrick">
                         <p class="pb-1">Start working with Landrick that can provide everything you need to generate awareness, drive traffic, connect.</p>
                         <div class="social-container">
-                            <button v-for="(social, i) in social" :key="i"><i :class="social.icon"></i></button>
+                            <button class="social-btn" v-for="(social, i) in social" :key="i"><i :class="social.icon"></i></button>
                         </div>
                     </div>
 
@@ -20,7 +20,7 @@
                                 <h6 class="fw-bold text-white pb-2">Company</h6>
                                 <ul class="list-unstyled">
                                     <li v-for="(link, i) in companyLinks" :key="i">
-                                    <i class="fa-solid fa-chevron-right"></i> {{ link }}</li>
+                                    <i class="fa-solid fa-chevron-right"></i><a href="javascript:void(0)"> {{ link }}</a></li>
                                 </ul>
                             </div>
 
@@ -28,7 +28,7 @@
                                 <h6 class="fw-bold text-white pb-2">Useful Links</h6>
                                 <ul class="list-unstyled">
                                     <li v-for="(link, i) in usefulLinks" :key="i">
-                                    <i class="fa-solid fa-chevron-right"></i> {{ link }}</li>
+                                    <i class="fa-solid fa-chevron-right"></i><a href="javascript:void(0)"> {{ link }}</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -36,7 +36,16 @@
 
                     <!--ISCRIZIONE NEWSLETTER-->
                     <div class="col">
+                        <h6 class="fw-bold text-white pb-2">Newsletter</h6>
+                        <p>Subscribe and receive the latest tips via email.</p>
+                        <div class="fw-bold pb-1">Write your email <span class="asterisk-sign">*</span></div>
 
+                        <div class="form-floating">
+                            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                            <label for="floatingInput"><i class="fa-regular fa-envelope me-2"></i> Your email:</label>
+                            
+                            <button class="sub-btn">Subscribe</button>
+                        </div>
                     </div>
                 </div>
 
@@ -90,7 +99,7 @@ footer {
         margin-bottom: 1rem;
     }
 
-    button {
+    .social-btn {
         border: none;
         background-color: $quaternary;
         border-radius: 15%;
@@ -109,6 +118,7 @@ footer {
         }
     }
 
+    //LINKS SECTION - II, III COL
     li {
         padding-bottom: .5rem;
 
@@ -117,6 +127,48 @@ footer {
             margin-right: .5rem;
             vertical-align: middle;
         }
+
+        a {
+            text-decoration: none;
+            color: $font-lightgray;
+        }
     }
+    
+    //NEWSLETTER SECTION - IV COL
+    .asterisk-sign {
+        color: #E43F52;
+    }
+
+    .form-floating > .form-control {
+        height: 20px;
+    }
+    .form-control {
+        background-color: #27314f;
+        border: none;
+    }
+
+    .form-floating > label {
+        padding: .5rem 1rem;
+        height: auto;
+    }
+
+    .sub-btn {
+        width: 100%;
+        background-color: #27314f;
+        color: $secondary;
+        font-size: .8rem;
+        font-weight: bold;
+        border: none;
+        border-radius: 5px;
+        padding: .5rem;
+        margin-top: 1rem;
+        box-shadow: 0px 2px 5px $tertiary;
+
+        &:hover {
+            background-color: lighten($color: #27314f, $amount: 5);
+            color: $font-lightgray;
+        }
+    }
+
 }
 </style>
