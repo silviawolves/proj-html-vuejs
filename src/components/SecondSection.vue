@@ -15,10 +15,33 @@
                     
                     <div class="code-navbar">
                         <div class="code-btn" v-for="(command, i) in codeSection" :key="i">
-                            <a href="javascript:void(0)">{{ command }}</a>
+                            <a @click="changePage(i)" :href="'#page-' + i">{{ command }}</a>
                         </div>
                     </div>
 
+                    <div class="code-content">
+                        <div :id="'page-' + currentPage" :class="{'show' : currentPage === 0, 'd-none' : currentPage !== 0}">
+                            <p class="mb-2"><span>$</span> npm install <span>-g</span> claps.js</p>
+                        </div>
+
+                        <div :id="'page-' + currentPage" :class="{'show' : currentPage === 1, 'd-none' : currentPage !== 1}">
+                            <p class="mb-2"><span>£</span> nuget i <span>-f</span> claps.js</p>
+                        </div>
+
+                        <div :id="'page-' + currentPage" :class="{'show' : currentPage === 2, 'd-none' : currentPage !== 2}">
+                            <p class="mb-2"><span>&</span> spm install Bootstrap <span>-h</span> claps.js</p>
+                        </div>
+
+                        <div :id="'page-' + currentPage" :class="{'show' : currentPage === 3, 'd-none' : currentPage !== 3}">
+                            <p class="mb-2"><span>create</span> github repo <span>-d</span> claps.js</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="d-flex pt-3">
+                    <p class="pe-4"><i class="fa-regular fa-circle-check"></i> Organize your data</p>
+                    <p><i class="fa-regular fa-circle-check"></i> Work with any team</p>
                 </div>
             </div>
         </div>
@@ -26,11 +49,18 @@
 </template>
 
 <script>
+
 export default {
     name: 'SecondSection',
     data() {
         return {
-            codeSection: ['npm', 'nuget', 'spm', 'github']
+            codeSection: ['npm', 'nuget', 'spm', 'github'],
+            currentPage: 0,
+        }
+    },
+    methods: {
+        changePage(indice) {
+            this.currentPage = indice
         }
     }
 }
@@ -85,6 +115,18 @@ p {
             }
         }
     }
+
+    .code-content {
+        padding: .5rem;
+        font-weight: bold;
+
+        & > div > p > span {
+            color: $acid-green;
+        }
+    }
+}
+.fa-circle-check {
+    color: $acid-green;
 }
 
 </style>
