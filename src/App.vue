@@ -4,7 +4,7 @@
     <button class="settings-btn"><i class="fa-solid fa-gear"></i></button>
 
     <TheHeader></TheHeader>
-    <ExternalLinks></ExternalLinks>
+    <SponsorLinks></SponsorLinks>
     <TheMain></TheMain>
     <TheFooter></TheFooter>
 
@@ -13,17 +13,18 @@
 
 <script>
 import TheHeader from './components/TheHeader.vue';
-import ExternalLinks from './components/ExternalLinks.vue';
+import SponsorLinks from './components/SponsorLinks.vue';
 import TheMain from './components/TheMain.vue';
 import TheFooter from './components/TheFooter.vue';
 
 export default {
     name: "App",
-    components: { TheHeader, ExternalLinks, TheMain, TheFooter },
+    components: { TheHeader, SponsorLinks, TheMain, TheFooter },
 }
 </script>
 
 <style lang="scss" scoped>
+@import "./assets/scss/main.scss";
 @import "./assets/scss/_variables.scss";
 
 #app {

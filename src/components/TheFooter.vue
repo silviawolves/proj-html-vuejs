@@ -98,7 +98,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../assets/scss/main.scss";
 @import "../assets/scss/_variables.scss";
 @import "../assets/scss/button.scss";
 
@@ -164,7 +163,7 @@ export default {
         }
 
         .form-floating > label {
-            padding: .5rem 1rem;
+            padding: .35rem 1rem;
             height: auto;
         }
 
@@ -194,8 +193,7 @@ export default {
         right: 20px;
         bottom: 20px;
         line-height: 35%;
-        box-shadow: 0px 2px 3px $tertiary;
-
+        
             i {
                 color: $font-lightgray;
                 font-size: .7rem;

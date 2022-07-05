@@ -22,8 +22,3 @@ export default {
     components: { FirstSection, SecondSection, ThirdSection, FourthSection, FifthSection },
 }
 </script>
-
-<style lang="scss" scoped>
-@import "../assets/scss/main.scss";
-
-</style>

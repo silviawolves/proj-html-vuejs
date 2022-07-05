@@ -127,9 +127,15 @@ p {
         & > div > p > span {
             color: $acid-green;
         }
+
+        p {
+            padding-bottom: 0;
+        }
     }
 }
+
 .fa-circle-check {
     color: $acid-green;
+    margin-right: .3rem;
 }
 </style>

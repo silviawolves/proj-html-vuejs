@@ -36,6 +36,7 @@ p {
 
 .my-input {
     position: relative;
+    margin-bottom: 2.5rem;
 
     input {
         border-radius: 25px;

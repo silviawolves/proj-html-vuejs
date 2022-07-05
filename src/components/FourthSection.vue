@@ -9,10 +9,10 @@
             </div>
         </div>      
 
-        <!--CARD PIANI TARIFFRI-->
+        <!--CARD PIANI TARIFFARI-->
         <div class="row">
             <div class="col" v-for="(element, i) in fetchData" :key="i">
-                <MyCard :plan-tag="element.name" :plan-price="element.price" :plan-rep="element.repetition" :plan-desc="element.description" :plan-details="element.list"></MyCard>
+                <MyCard :plan-tag="element.name" :plan-price="element.price" :plan-rep="element.repetition" :plan-desc="element.description" :plan-details="element.list" :is-best-plan="element.bestPrice === true"></MyCard>
             </div>
         </div>
 
