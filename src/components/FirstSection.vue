@@ -1,7 +1,7 @@
 <template>
     <div class="container py-5">
         <h4 class="fw-bold pt-5 pb-3 text-black">Key Features</h4>
-        <p>Start working with <span>Landrick</span> that can provide everything you need to generate awareness, drive traffic, connect.</p>
+        <p class="w-50">Start working with <span>Landrick</span> that can provide everything you need to generate awareness, drive traffic, connect.</p>
 
         <div class="row">
             <div class="col" v-for="(card, i) in keyFeatures" :key="i">
